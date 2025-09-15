@@ -24,7 +24,7 @@ public class FigurinhaController {
 
     @GetMapping(path = "/figurinha/{figurinhaId}")
     public FigurinhaDTO getFigurinha(@PathVariable Long figurinhaId){
-        Figurinha t =  todoService.getFigurinha(figurinhaId);
+        Figurinha t =  todoService.buscarPorId(figurinhaId);
         return convertToDTO(t);
     }
 
